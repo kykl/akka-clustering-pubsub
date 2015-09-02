@@ -3,6 +3,8 @@ akka-clustering-pubsub example
 
 An example akka-cluster project with docker support. See [the blog post](http://blog.michaelhamrah.com/2014/11/clustering-akka-applications-with-docker-version-3/). Uses [SBT Native Packager](https://github.com/sbt/sbt-native-packager).
 
+It uses three agents and one publisher to demo job submission using Akka Distributed PubSub. A job when submited, it reaches all three agents. You need to provide a distributed test-and-set so that it's real. Meantime, it always pick 'agent1' to run the job while agent2 and agent3 would skp it.
+
 ### How to Run (with only SBT)
 Install SBT first from here - http://www.scala-sbt.org/release/tutorial/Setup.html
 ```
